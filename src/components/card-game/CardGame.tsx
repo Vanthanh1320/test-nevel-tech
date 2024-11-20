@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import mahJongWays from '../../assets/images/mahjong-ways.png'
-import mahJongWaysSmall from '../../assets/images/mahJong-ways-small.png'
+import mahJongWaysSmall from '../../assets/images/mahjong-ways-small.png'
 import wildBandito from '../../assets/images/wild-bandito.png'
 import wildBanditoSmall from '../../assets/images/wild-bandito-small.png'
 import tree from '../../assets/images/tree.png'
