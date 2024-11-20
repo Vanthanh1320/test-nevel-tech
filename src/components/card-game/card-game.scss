@@ -1,0 +1,123 @@
+.card-game {
+	&__image img {
+		width: 100%;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+
+		img {
+			width: 90px;
+			height: 90px;
+		}
+
+		&-text {
+			margin: 0 23px 0 20px;
+
+			h3 {
+				font-size: 19.22px;
+				font-weight: 600;
+				margin-bottom: 8px;
+			}
+
+			p {
+				font-size: 13.67px;
+				font-weight: 500;
+			}
+		}
+	}
+
+	&__view {
+		min-width: 75px;
+		height: fit-content;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+
+		text-align: center;
+		font-size: 13.78px;
+		line-height: 14px;
+		font-weight: 600;
+		color: #000;
+		padding: 6px 0;
+	}
+
+	&__navigation {
+		display: flex;
+
+		.button-prev, .button-next {
+			cursor: pointer;
+			position: absolute;
+			top: 15px;
+			background: transparent;
+			border: none;
+			width: 30px;
+			height: 30px;
+			right: 0;
+
+			svg > path {
+				fill: #ccc;
+			}
+		}
+
+		.button-prev {
+			right: 30px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		&__navigation, .swiper {
+			display: none;
+		}
+
+		&__item-mobile {
+			display: block;
+			margin: 0 20px;
+			background: #C48F03;
+			border-radius: 20px;
+		}
+
+		&__image > img {
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
+
+		&__attribute {
+			margin-top: 28px;
+			&-item {
+				flex: 1;
+			}
+
+			h4 {
+				font-size: 14px;
+				line-height: 16px;
+				text-transform: uppercase;
+				color: #fff;
+			}
+
+			span {
+				font-size: 12px;
+				line-height: 12px;
+				color: #e3c673;
+			}
+		}
+
+		&__content {
+			display: block;
+			margin-top: 0;
+			padding: 20px;
+
+			img {
+				width: 60px;
+				height: 60px;
+			}
+			p {
+				color: #e3c673;
+			}
+			h3 {
+				color: #fff;
+			}
+		}
+	}
+}

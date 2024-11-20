@@ -1,0 +1,158 @@
+.category-hot {
+	&__slide {
+		padding: 20px;
+		background: #f2f2f2;
+		border-radius: 28px;
+		display: flex;
+		gap: 30px;
+	}
+
+	&__content {
+		flex: 1;
+		background: #5C6EFF;
+		border-radius: 20px;
+		padding: 20px;
+		margin-bottom: 20px;
+		color: #fff;
+
+		h3 {
+			margin: 15px 0 18px;
+			font-weight: 500;
+			font-size: 21.66px;
+			line-height: 16px;
+		}
+
+		p {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 20px;
+			min-width: 158px;
+		}
+
+	}
+
+	&__left, &__right {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+	}
+
+	&__image {
+		display: flex;
+		justify-content: space-between;
+
+		img {
+			width: 95px;
+			height: 95px;
+		}
+
+		&-large > img{
+			margin-top: 20px;
+			width: 100%;
+			border-radius: 20px;
+		}
+	}
+
+	&__navigation {
+		display: flex;
+
+		.button-prev, .button-next {
+			cursor: pointer;
+			position: absolute;
+			top: 15px;
+			background: transparent;
+			border: none;
+			width: 30px;
+			height: 30px;
+			right: 0;
+
+			svg > path {
+				fill: #ccc;
+			}
+		}
+
+		.button-prev {
+			right: 30px;
+		}
+	}
+
+
+	.swiper-pagination {
+		display: none;
+	}
+
+	@media screen and (max-width: 768px) {
+		&__slide, &__content {
+			padding: 15px;
+		}
+
+		&__content {
+			p {
+				min-width: 124px;
+			}
+		}
+
+		&__image {
+			img {
+				width: 75px;
+				height: 75px;
+			}
+		}
+
+		&__navigation {
+			display: none;
+		}
+
+		.swiper {
+			position: relative;
+			.swiper-wrapper {
+				padding-bottom: 40px;
+			}
+			.swiper-pagination {
+				display: flex;
+				align-items: center;
+				left: calc(50% - 45px);
+				bottom: 0px;
+				width: fit-content;
+	
+				.swiper-pagination-bullet.swiper-pagination-bullet-active {
+					position: relative;
+					background: transparent;
+					width: 18px;
+					height: 18px;
+					border: 1px solid #9B9B9B;
+					border-radius: 50%;
+	
+					&::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 10px;
+						height: 10px;
+						background: #9B9B9B;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+
+		.btn-load {
+			display: block;
+			margin: 10px auto 0;
+			background: #fafafa;
+			border: none;
+			border-radius: 14px;
+			width: 85%;
+			height: 50px;
+			font-size: 15px;
+			font-weight: 600;
+			line-height: 48px;
+
+			img {
+				margin-left: 8px;
+			}
+		}
+	}
+}

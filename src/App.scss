@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "PingFang-SC-Light";
+	src: url("./fonts/PingFang-SC-Light.ttf") format ("truetype");
+	font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: "PingFang-SC-Regular";
+	src: url("./fonts/PingFang-SC-Regular.ttf") format ("truetype");
+	font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: "PingFang-SC-Bold";
+	src: url("./fonts/PingFang-SC-Bold.ttf") format ("truetype");
+	font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "PingFang-SC-Regular", sans-serif;
+  background-color: #fff;
+}
+
+h2 {
+  font-size: 28.36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: none;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-12 {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.block-game {
+  padding: 99px 0 60.59px;
+
+  &-hot, .block-category-hot {
+    position: relative;
+  }
+
+  .block-category-hot{
+    margin-top: 85px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1240px;
+  }
+
+  .row {
+    margin: 0 -20px;
+  }
+
+  .col-md-3 {
+    width: 16.66667%;
+    padding: 0 20px;
+  }
+
+  .col-md-5 {
+    width: 41.66667%;
+    padding: 0 20px;
+  }
+  
+  .col-md-7 {
+    width: 58.33333%;
+    padding: 0 20px;
+  }
+
+  .col-md-9 {
+    width: 83.33333%;
+    padding: 0 20px;
+  }
+
+  .col-12 {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+
+  .block-game {
+    padding: 0;
+  }
+
+  .game-hot-select {
+    position: relative;
+    
+    select[name="related-date"] {
+      display: block;
+      min-width: 145px;
+      height: 26px;
+      padding: 0 10px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 26px;
+      border: 1px solid #ccc;
+    }
+
+    &::after {
+      content: "AZ";
+      position: absolute;
+      top: 2px;
+      right: 20px;
+      font-size: 8px;
+      font-weight: 600;
+      line-height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
